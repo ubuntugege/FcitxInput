@@ -1,0 +1,23 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Sublime Text{version} Fcitx
+GenericName=Text Editor
+Comment=Sophisticated text editor for code, markup and prose
+Exec={pkg_dir}/sublime_text_fcitx.sh %F
+Terminal=false
+MimeType=text/plain;
+Icon={st_icon}
+Categories=TextEditor;Development;
+StartupNotify=true
+Actions=Window;Document;
+
+[Desktop Action Window]
+Name=New Window
+Exec={pkg_dir}/sublime_text_fcitx.sh -n
+OnlyShowIn=Unity;
+
+[Desktop Action Document]
+Name=New File
+Exec={pkg_dir}/sublime_text_fcitx.sh --command new_file
+OnlyShowIn=Unity;

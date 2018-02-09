@@ -1,0 +1,6 @@
+*.pyc
+
+*.sublime-commands
+*.sublime-menu
+
+sublime_text_*.*

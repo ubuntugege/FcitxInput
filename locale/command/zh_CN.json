@@ -1,0 +1,16 @@
+[
+	{
+		"caption": "SublimeFcitx: 创建桌面快捷方式...",
+		"command": "sublimefcitx",
+		"args": {
+			"build_version": false
+		}
+	},
+	{
+		"caption": "SublimeFcitx: 创建编译版本桌面快捷方式...",
+		"command": "sublimefcitx",
+		"args": {
+			"build_version": true
+		}
+	}
+]

@@ -1,0 +1,77 @@
+[
+	{
+		"id": "tools",
+		"children":
+		[
+			{
+				"id": "sublimefcitx",
+				"caption": "SublimeFcitx",
+				"children":
+				[
+					{
+						"caption": "创建桌面快捷方式...",
+						"command": "sublimefcitx",
+						"args":
+						{
+							"build_version": false
+						}
+					},
+					{
+						"caption": "创建编译版本桌面快捷方式...",
+						"command": "sublimefcitx",
+						"args":
+						{
+							"build_version": true
+						}
+					}
+				]
+			}
+		]
+
+	},
+	{
+		"id": "preferences",
+		"mnemonic": "n",
+		"children":
+		[
+			{
+				"caption": "插件设置",
+				"id": "package-settings",
+				"mnemonic": "P",
+				"children":
+				[
+					{
+						"caption": "SublimeFcitx",
+						"children":
+						[
+                            {
+								"caption": "README.md",
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/SublimeFcitx/README.md"
+                                }
+                            },
+							{
+								"caption": "-"
+							},
+							{
+								"args": {
+									"file": "${packages}/SublimeFcitx/SublimeFcitx.sublime-settings"
+								},
+								"caption": "设置 – 默认",
+								"command": "open_file"
+							},
+							{
+								"args": {
+									"file": "${packages}/User/SublimeFcitx.sublime-settings"
+								},
+								"caption": "设置 – 用户",
+								"command": "open_file"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

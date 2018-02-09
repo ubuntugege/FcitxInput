@@ -1,0 +1,12 @@
+SublimeFcitx 使用说明
+=======================================
+1. 为了让本插件能正常工作，系统*必需*先安装Fcitx，然后把fcitx设置为系统默认输入法，并随开机启动。
+	Ubuntu/Debian中安装命令 `sudo apt-get install fcitx-table-wbpy`(适用于Ubuntu 16.04)。
+		Ubuntu 16.04 可以语言设置中把默认输入法设为fcitx。
+	Fedora/RedHat中安装命令 `sudo yum install fcitx-table-chinese`(适用于Fedora 27)。
+		Fedora 27 可安装 gnome-tweak-tool，然后把fcitx添加到`开机启动程序`中。
+	***安装完成后最好重启一下系统***
+2. 若在Sublime Text 2 中使用，必需要配置插件的st_exe配置项，指定主程序文件sublime_text的完整路径。
+	通过菜单Preferences > Package Settings > SublimeFcitx > Settings - User打开配置
+
+常见问题及反馈见: https://github.com/ubuntugege/SublimeFcitx/issues

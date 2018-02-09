@@ -1,0 +1,9 @@
+{
+	// locale code, en/zh_CN/zh_TW
+	"locale": "en",
+
+	// DON NOT NEEDED IN SUBLIME TEXT 3
+	// Sublime Text 2 exe full path
+	// eg: /opt/sublime_text_2/sublime_text
+	"st_exe": ""
+}
