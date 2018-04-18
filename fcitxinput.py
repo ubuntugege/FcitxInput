@@ -9,21 +9,21 @@ st_ver = st_version[0]
 pkg_dir = os.path.dirname(os.path.abspath(__file__))
 pkg_name = os.path.basename(pkg_dir)
 
-class SublimefcitxCommand(sublime_plugin.ApplicationCommand):
+class FcitxinputCommand(sublime_plugin.ApplicationCommand):
 	def run(self, build_version):
 		run_create(build_version)
 
 class SfInstructionCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		view = self.view
-		view.set_name("SublimeFcitx")
+		view.set_name("FcitxInput")
 		view.settings().set("word_wrap", True)
 		instruction_dir = os.path.join(pkg_dir, "locale", "instruction");
 		instruction = os.path.join(instruction_dir, "instruction.txt")
 		locale_instruction = os.path.join(instruction_dir, "instruction."+locale+".txt")
 		if os.path.isfile(locale_instruction):
 			instruction = locale_instruction
-		view.insert(edit, 0, open(instruction, 'r').read())
+		view.insert(edit, 0, file_get_contents(instruction))
 		view.set_scratch(True)
 		view.set_read_only(True)
 
@@ -52,7 +52,7 @@ def run_create(build_version = False):
 
 def make_launch_shell(version):
 	st_exe = get_exe()
-	shell = open(os.path.join(pkg_dir, ".sublime_fcitx.sh"), "r").read()
+	shell = file_get_contents(os.path.join(pkg_dir, ".sublime_fcitx.sh"))
 	shell = shell.replace("{st_exe}", st_exe)
 	shell = shell.replace("{pkg_dir}", pkg_dir)
 	shell = shell.replace("{arch}", st_arch)
@@ -60,8 +60,8 @@ def make_launch_shell(version):
 	st_sh_v = os.path.join(pkg_dir, "sublime_text_fcitx.sh")
 	st_sh_b = os.path.join(pkg_dir, "sublime_text_"+version+"_fcitx.sh")
 
-	open(st_sh_v, "w").write(shell.replace("{version}", ""))
-	open(st_sh_b, "w").write(shell.replace("{version}", "_"+version))
+	file_put_contents(st_sh_v, shell.replace("{version}", ""))
+	file_put_contents(st_sh_b, shell.replace("{version}", "_"+version))
 
 	os.chmod(st_sh_v, os.stat(st_sh_v).st_mode | stat.S_IEXEC)
 	os.chmod(st_sh_b, os.stat(st_sh_b).st_mode | stat.S_IEXEC)
@@ -82,15 +82,15 @@ def create_desktop_entry(version):
 	if st_ver == "2":
 		st_icon = st_icon+"-"+st_ver
 
-	shortcut = open(os.path.join(pkg_dir, ".sublime_fcitx.desktop"), "r").read()
+	shortcut = file_get_contents(os.path.join(pkg_dir, ".sublime_fcitx.desktop"))
 	shortcut = shortcut.replace("{pkg_dir}", pkg_dir)
 	shortcut = shortcut.replace("{st_icon}", st_icon)
 
 	st_v_shortcut = os.path.join(pkg_dir, "sublime_text_fcitx.desktop")
 	st_b_shortcut = os.path.join(pkg_dir, "sublime_text_"+version+"_fcitx.desktop")
 
-	open(st_v_shortcut, "w").write(shortcut.replace("{version}", ""))
-	open(st_b_shortcut, "w").write(shortcut.replace("{version}", " "+version))
+	file_put_contents(st_v_shortcut, shortcut.replace("{version}", ""))
+	file_put_contents(st_b_shortcut, shortcut.replace("{version}", " "+version))
 
 	app_dir = os.path.expanduser("~")+"/.local/share/applications"
 	if not os.path.isdir(app_dir):
@@ -159,25 +159,37 @@ def update_tool_menu():
 	origin_menu = os.path.join(pkg_dir, ".menu.json")
 	locale_menu = os.path.join(pkg_dir, "locale", "menu", locale+".json")
 	if os.path.isfile(locale_menu):
-		menu = open(locale_menu, "r").read()
+		menu = file_get_contents(locale_menu)
 	else:
-		menu = open(origin_menu, "r").read()
-	open(os.path.join(pkg_dir, "Main.sublime-menu"), "w").write(menu)
+		menu = file_get_contents(origin_menu)
+	file_put_contents(os.path.join(pkg_dir, "Main.sublime-menu"), menu)
 
 def update_command_menu():
 	origin_menu = os.path.join(pkg_dir, ".command.json")
 	locale_menu = os.path.join(pkg_dir, "locale", "command", locale+".json")
 	if os.path.isfile(locale_menu):
-		menu = open(locale_menu, "r").read()
+		menu = file_get_contents(locale_menu)
 	else:
-		menu = open(origin_menu, "r").read()
-	open(os.path.join(pkg_dir, pkg_name+".sublime-commands"), "w").write(menu)
+		menu = file_get_contents(origin_menu)
+	file_put_contents(os.path.join(pkg_dir, pkg_name+".sublime-commands"), menu)
 
 def update_menu():
 	global locale
 	locale = sublime.load_settings(pkg_name+".sublime-settings").get("locale", "en_US")
 	update_tool_menu()
 	update_command_menu()
+
+def file_get_contents(filename):
+	with open(filename, "r") as f:
+		data = f.read()
+		f.close()
+		return data
+
+def file_put_contents(filename, content):
+	with open(filename, "w") as f:
+		f.write(content)
+		f.close()
+		return True
 
 def plugin_loaded():
 	sublime.set_timeout(init, 200)

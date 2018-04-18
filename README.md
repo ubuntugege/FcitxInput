@@ -1,4 +1,4 @@
-# SublimeFcitx
+# FcitxInput
 Input Chinese/Japanese/Korean/Vietnamese with [Fcitx](https://fcitx-im.org) on linux platform.
 
 - Genrate command line with fcitx
@@ -11,40 +11,40 @@ Input Chinese/Japanese/Korean/Vietnamese with [Fcitx](https://fcitx-im.org) on l
 - zh_TW [繁体中文](readme/README.zh_TW.md)
 
 # Repository Mirrors
-- [GitHub](https://github.com/ubuntugege/SublimeFcitx)
-- [OSC](https://gitee.com/ubuntugege/SublimeFcitx)
-- [Coding](https://coding.net/ubuntugege/SublimeFcitx)
+- [GitHub](https://github.com/ubuntugege/FcitxInput)
+- [OSC](https://gitee.com/ubuntugege/FcitxInput)
+- [Coding](https://coding.net/ubuntugege/FcitxInput)
 
 # Shots
 #### Work on Fedora
-![Work on OS X](https://raw.githubusercontent.com/ubuntugege/SublimeFcitx/shots/shots/sublime_fcitx_fedora.png)
+![Work on OS X](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/sublime_fcitx_fedora.png)
 #### Work on Ubuntu
-![Work on Ubuntu](https://raw.githubusercontent.com/ubuntugege/SublimeFcitx/shots/shots/sublime_fcitx_ubuntu.png)
+![Work on Ubuntu](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/sublime_fcitx_ubuntu.png)
 
 # Installation
 - With Package Control
 	- install [Package Control](https://packagecontrol.io/installation)
-	- search for `SublimeFcitx`
+	- search for `FcitxInput`
 - Manually
-	- donwload [master.zip](https://github.com/ubuntugege/SublimeFcitx/archive/master.zip)，unpack to `Packages`，then rename `SublimeFcitx-master` to `SublimeFcitx`
+	- donwload [master.zip](https://github.com/ubuntugege/FcitxInput/archive/master.zip)，unpack to `Packages`，then rename `FcitxInput-master` to `FcitxInput`
 	- git clone to `Packages`
 	```
-	git clone https://github.com/ubuntugege/SublimeFcitx
+	git clone https://github.com/ubuntugege/FcitxInput
 	```
 
 # Usage
 - Create desktop entry in menu
-	- via `Tool` -> `SublimeFcitx`
+	- via `Tool` -> `FcitxInput`
 - Create desktop entry in command panel
 	- `Ctrl+Shift+P`, type`sfc` to select command
 - Config `st_exe` (*ONLY* needed for sublime text 2)
-	- `Preferences` > `Package Settings` > `SublimeFcitx` > `Settings - User`
+	- `Preferences` > `Package Settings` > `FcitxInput` > `Settings - User`
 
 # Issues
-- [https://github.com/ubuntugege/SublimeFcitx/issues](https://github.com/ubuntugege/SublimeFcitx/issues)
+- [https://github.com/ubuntugege/FcitxInput/issues](https://github.com/ubuntugege/FcitxInput/issues)
 
 # Say Thanks
 - Paypal
-	<br> [![Donate via Paypal](https://raw.githubusercontent.com/ubuntugege/SublimeFcitx/shots/shots/donate_via_paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YL6ZR7Q4WGSQ4)
+	<br> [![Donate via Paypal](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/donate_via_paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YL6ZR7Q4WGSQ4)
 - Alipay
-	<br> ![Donate via Alipay](https://raw.githubusercontent.com/ubuntugege/SublimeFcitx/shots/shots/donate_via_alipay.png)
+	<br> ![Donate via Alipay](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/donate_via_alipay.png)

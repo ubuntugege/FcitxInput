@@ -1,14 +1,14 @@
 [
 	{
-		"caption": "SublimeFcitx: 創建桌面快捷方式...",
-		"command": "sublimefcitx",
+		"caption": "FcitxInput: 創建桌面快捷方式...",
+		"command": "fcitxinput",
 		"args": {
 			"build_version": false
 		}
 	},
 	{
-		"caption": "SublimeFcitx: 創建編譯版本桌面快捷方式...",
-		"command": "sublimefcitx",
+		"caption": "FcitxInput: 創建編譯版本桌面快捷方式...",
+		"command": "fcitxinput",
 		"args": {
 			"build_version": true
 		}

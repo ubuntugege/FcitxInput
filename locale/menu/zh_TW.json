@@ -4,13 +4,13 @@
 		"children":
 		[
 			{
-				"id": "sublimefcitx",
-				"caption": "SublimeFcitx",
+				"id": "fcitxinput",
+				"caption": "FcitxInput",
 				"children":
 				[
 					{
 						"caption": "創建桌面快捷方式...",
-						"command": "sublimefcitx",
+						"command": "fcitxinput",
 						"args":
 						{
 							"build_version": false
@@ -18,7 +18,7 @@
 					},
 					{
 						"caption": "創建編譯版本桌面快捷方式...",
-						"command": "sublimefcitx",
+						"command": "fcitxinput",
 						"args":
 						{
 							"build_version": true
@@ -41,14 +41,14 @@
 				"children":
 				[
 					{
-						"caption": "SublimeFcitx",
+						"caption": "FcitxInput",
 						"children":
 						[
                             {
 								"caption": "README.md",
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/SublimeFcitx/README.md"
+                                    "file": "${packages}/FcitxInput/README.md"
                                 }
                             },
 							{
@@ -56,14 +56,14 @@
 							},
 							{
 								"args": {
-									"file": "${packages}/SublimeFcitx/SublimeFcitx.sublime-settings"
+									"file": "${packages}/FcitxInput/FcitxInput.sublime-settings"
 								},
 								"caption": "設置 – 默認",
 								"command": "open_file"
 							},
 							{
 								"args": {
-									"file": "${packages}/User/SublimeFcitx.sublime-settings"
+									"file": "${packages}/User/FcitxInput.sublime-settings"
 								},
 								"caption": "設置 – 用戶",
 								"command": "open_file"

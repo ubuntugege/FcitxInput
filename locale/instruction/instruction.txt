@@ -1,4 +1,4 @@
-SublimeFcitx Instruction
+FcitxInput Instruction
 =======================================
 1. In order for this plugin to work properly, the system *MUST* install Fcitx, and then set fcitx as the system default input method, and startup with system.
 	Install command sudo apt-get install fcitx-table-wbpy` in Ubuntu / Debian (for Ubuntu 16.04).
@@ -7,6 +7,6 @@ SublimeFcitx Instruction
 	Fedora 27 installs the gnome-tweak-tool, and then adds fcitx to the `startup`.
 	*** After installation recommend restart the system ***
 2. In Sublime Text 2, the plugin config item `st_exe` *MUST* be specified as the full path sublime_text executable file.
-	Open the configuration via Menu Preferences > Package Settings > SublimeFcitx > Settings - User
+	Open the configuration via Menu Preferences > Package Settings > FcitxInput > Settings - User
 
-Any Issues: https://github.com/ubuntugege/SublimeFcitx/issues
+Any Issues: https://github.com/ubuntugege/FcitxInput/issues

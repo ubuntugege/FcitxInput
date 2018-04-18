@@ -1,14 +1,14 @@
 [
 	{
-		"caption": "SublimeFcitx: Create Desktop Entry With Fcitx...",
-		"command": "sublimefcitx",
+		"caption": "FcitxInput: Create Desktop Entry With Fcitx...",
+		"command": "fcitxinput",
 		"args": {
 			"build_version": false
 		}
 	},
 	{
-		"caption": "SublimeFcitx: Create Desktop Entry With Fcitx For Build Version...",
-		"command": "sublimefcitx",
+		"caption": "FcitxInput: Create Desktop Entry With Fcitx For Build Version...",
+		"command": "fcitxinput",
 		"args": {
 			"build_version": true
 		}
