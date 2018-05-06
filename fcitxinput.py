@@ -181,15 +181,11 @@ def update_menu():
 
 def file_get_contents(filename):
 	with open(filename, "r") as f:
-		data = f.read()
-		f.close()
-		return data
+		return f.read()
 
 def file_put_contents(filename, content):
 	with open(filename, "w") as f:
-		f.write(content)
-		f.close()
-		return True
+		return f.write(content)
 
 def plugin_loaded():
 	sublime.set_timeout(init, 200)
