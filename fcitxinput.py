@@ -29,6 +29,7 @@ class SfInstructionCommand(sublime_plugin.TextCommand):
 
 def run_create(build_version = False):
 	if st_platform != "linux":
+		sublime.error_message(pkg_name+" only needed on linux platform.")
 		return
 
 	st_exe = get_exe()
