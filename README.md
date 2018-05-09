@@ -36,7 +36,7 @@ Input Chinese/Japanese/Korean/Vietnamese with [Fcitx](https://fcitx-im.org) on l
 - Create desktop entry in menu
 	- via `Tool` -> `FcitxInput`
 - Create desktop entry in command panel
-	- `Ctrl+Shift+P`, type`sfc` to select command
+	- `Ctrl+Shift+P`, type`fci` to select command
 - Config `st_exe` (*ONLY* needed for sublime text 2)
 	- `Preferences` > `Package Settings` > `FcitxInput` > `Settings - User`
 
@@ -45,6 +45,6 @@ Input Chinese/Japanese/Korean/Vietnamese with [Fcitx](https://fcitx-im.org) on l
 
 # Say Thanks
 - Paypal
-	<br> [![Donate via Paypal](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/donate_via_paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YL6ZR7Q4WGSQ4)
+	<br> [![Donate via Paypal](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/donate_via_paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6J8DR2CCXPF9N)
 - Alipay
 	<br> ![Donate via Alipay](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/donate_via_alipay.png)

@@ -36,7 +36,7 @@
 - 在菜單中創建快捷方式
 	- 依次展開菜單 `Tool` > `FcitxInput`
 - 在命令面板中創建快捷方式
-	- 用`Ctrl+Shift+P`打開命令面板, 輸入`sfc` 選擇相應命令菜單
+	- 用`Ctrl+Shift+P`打開命令面板, 輸入`fci` 選擇相應命令菜單
 - 設置`st_exe`配置項(*只*在sublime text 2中需要)
 	- `Preferences` > `Package Settings` > `FcitxInput` > `Settings - User`
 
@@ -45,6 +45,6 @@
 
 # 捐赠支持
 - Paypal
-	<br> [![用Paypal捐贈](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/donate_via_paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YL6ZR7Q4WGSQ4)
+	<br> [![用Paypal捐贈](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/donate_via_paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6J8DR2CCXPF9N)
 - 支付寶
 	<br> ![用支付寶捐贈](https://raw.githubusercontent.com/ubuntugege/FcitxInput/shots/shots/donate_via_alipay.png)
