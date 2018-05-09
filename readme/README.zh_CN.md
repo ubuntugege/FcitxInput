@@ -13,7 +13,7 @@
 # 代码仓库镜像
 - [GitHub](https://github.com/ubuntugege/FcitxInput)
 - [OSC](https://gitee.com/ubuntugege/FcitxInput)
-- [Coding](https://coding.net/ubuntugege/FcitxInput)
+- [Coding](https://coding.net/u/ubuntugege/p/FcitxInput/git?public=true)
 
 # 使用截图
 #### 在Fedora中使用

@@ -13,7 +13,7 @@ Input Chinese/Japanese/Korean/Vietnamese with [Fcitx](https://fcitx-im.org) on l
 # Repository Mirrors
 - [GitHub](https://github.com/ubuntugege/FcitxInput)
 - [OSC](https://gitee.com/ubuntugege/FcitxInput)
-- [Coding](https://coding.net/ubuntugege/FcitxInput)
+- [Coding](https://coding.net/u/ubuntugege/p/FcitxInput/git?public=true)
 
 # Shots
 #### Work on Fedora
