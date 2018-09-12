@@ -1,5 +1,8 @@
 import sublime, sublime_plugin
 import os, stat, shutil, subprocess
+import sys
+
+sys.setdefaultencoding('utf-8')
 
 st_platform = sublime.platform()
 st_arch = sublime.arch()
