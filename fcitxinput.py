@@ -2,6 +2,7 @@ import sublime, sublime_plugin
 import os, stat, shutil, subprocess
 import sys
 
+reload(sys)
 sys.setdefaultencoding('utf-8')
 
 st_platform = sublime.platform()
