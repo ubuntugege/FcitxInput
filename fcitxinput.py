@@ -1,17 +1,19 @@
 import sublime, sublime_plugin
-import os, stat, shutil, subprocess
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
+import os, sys, stat, shutil, subprocess, zipfile
 
 st_platform = sublime.platform()
 st_arch = sublime.arch()
 st_version = sublime.version()
 st_ver = st_version[0]
 
+if st_ver == "2":
+	reload(sys)
+	sys.setdefaultencoding('utf-8')
+
 pkg_dir = os.path.dirname(os.path.abspath(__file__))
 pkg_name = os.path.basename(pkg_dir)
+if '.' in pkg_name:
+	pkg_name = pkg_name.split('.')[0]
 
 class FcitxinputCommand(sublime_plugin.ApplicationCommand):
 	def run(self, build_version):
@@ -192,11 +194,23 @@ def file_put_contents(filename, content):
 	with open(filename, "w") as f:
 		return f.write(content)
 
+def unpack(filename, to_dir):
+	z = zipfile.ZipFile(filename, 'r')
+	files = [i.filename for i in z.infolist()]
+	for item in files:
+		z.extract(item, to_dir)
+	z.close()
+
 def plugin_loaded():
 	sublime.set_timeout(init, 200)
 
 def init():
 	if st_platform != "linux":
+		return
+	if st_ver == '3' and os.path.isfile(pkg_dir):
+		to_dir = os.path.join(sublime.packages_path(), pkg_name);
+		if not os.path.isdir(to_dir):
+			unpack(pkg_dir, to_dir)
 		return
 	update_menu()
 	sublime.load_settings(pkg_name+".sublime-settings").add_on_change('locale', update_menu)
