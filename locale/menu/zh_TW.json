@@ -35,7 +35,7 @@
 		"children":
 		[
 			{
-				"caption": "插件設置",
+				"caption": "插件設置(P)",
 				"id": "package-settings",
 				"mnemonic": "P",
 				"children":
