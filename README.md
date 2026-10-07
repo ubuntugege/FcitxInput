@@ -4,6 +4,7 @@ Input Chinese/Japanese/Korean/Vietnamese with [Fcitx](https://fcitx-im.org) on l
 - Genrate command line with fcitx
 - Create desktop entry with fcitx
 - Test pass on ubuntu and Fedora, also works well on other linux platform
+- **This plugin is NOT needed for sublime text v3.2(build 3200+)**
 
 # README.md
 - en [English](README.md)
