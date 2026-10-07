@@ -4,6 +4,7 @@
 - 可创建启动支持Fcitx输入法的命令行程序
 - 可创建启动支持Fcitx输入法的桌面快捷方式
 - 已在Ubuntu/Fedora系统中测试过,也支持在其它Linux系统中使用
+- **Sublime Text v3.2(build 3200+) 无需此插件，ST原生支持fcitx中文输入法了**
 
 # README.md各语言版本
 - en [English](../README.md)
